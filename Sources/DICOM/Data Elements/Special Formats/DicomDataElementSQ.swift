@@ -21,7 +21,7 @@ import Foundation
  not applicable (see Section 7.5)
  */
 public class DicomDataElementSQ: DicomDataElement {
-    private(set) var items: [DicomSequenceItem] = []
+    public private(set) var items: [DicomSequenceItem] = []
 
     func add(_ item: DicomSequenceItem) {
         self.items.append(item)
@@ -34,7 +34,7 @@ public class DicomDataElementSQ: DicomDataElement {
 
 
 public class DicomSequenceItem {
-    private(set) var dataElements: [DicomDataElement] = []
+    public private(set) var dataElements: [DicomDataElement] = []
 
     func add(_ dataElement: DicomDataElement) {
         self.dataElements.append(dataElement)

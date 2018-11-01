@@ -16,7 +16,7 @@ public struct DicomTransferSyntax {
     static private var dictionary: [String: DicomTransferSyntax] {
         do {
             var dictionary: [String: DicomTransferSyntax] = [:]
-            guard let tsJSONURL = Bundle.main.url(forResource: "DicomTransferSyntax", withExtension: "json") else {
+            guard let tsJSONURL = Bundle(for: DicomFile.self).url(forResource: "DicomTransferSyntax", withExtension: "json") else {
                 fatalError("Couldn't file Transfer Syntax definition file")
             }
             let tsJSONData = try Data(contentsOf: tsJSONURL)
