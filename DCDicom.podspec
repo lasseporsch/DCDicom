@@ -1,24 +1,24 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
-  spec.name         = 'DCDicom'
-  spec.version      = '0.1.0'
-  spec.summary      = 'A DICOM reader written in Swift.'
+  s.name         = 'DCDicom'
+  s.version      = '0.1.0'
+  s.summary      = 'A DICOM reader written in Swift.'
 
-  spec.homepage     = 'https://github.com/D-CSM/DCDicom'
+  s.homepage     = 'https://github.com/D-CSM/DCDicom'
 
-  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
-  spec.author       = { 'Lasse Porsch' => 'lasse.porsch@d-csm.com' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { 'Lasse Porsch' => 'lasse.porsch@d-csm.com' }
 
-  spec.ios.deployment_target = '8.0'
-  spec.osx.deployment_target = '10.9'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
 
-  spec.source       = { :git => 'https://github.com/D-CSM/DCDicom.git', :tag => '#{spec.version}' }
-  spec.source_files = 'Sources/**/*.swift'
-  spec.requires_arc = true
+  s.source       = { :git => 'https://github.com/D-CSM/DCDicom.git', :tag => s.version.to_s }
+  s.source_files = 'Sources/**/*.swift'
+  s.requires_arc = true
 
-  spec.resources    = 'Resources/**/*.*'
+  s.resources    = 'Resources/**/*.*'
 
-  spec.swift_version = '4.2'
+  s.swift_version = '4.2'
 
-  spec.dependency 'Unbox', '3.0.0'
+  s.dependency 'Unbox', '3.0.0'
 end

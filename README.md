@@ -1,9 +1,9 @@
 # DCDicom
 
 [![CI Status](https://img.shields.io/travis/lasseporsch/DCDicom.svg?style=flat)](https://travis-ci.org/lasseporsch/DCDicom)
-[![Version](https://img.shields.io/cocoapods/v/Blah.svg?style=flat)](https://cocoapods.org/pods/Blah)
-[![License](https://img.shields.io/cocoapods/l/Blah.svg?style=flat)](https://cocoapods.org/pods/Blah)
-[![Platform](https://img.shields.io/cocoapods/p/Blah.svg?style=flat)](https://cocoapods.org/pods/Blah)
+[![Version](https://img.shields.io/cocoapods/v/DCDicom.svg?style=flat)](https://cocoapods.org/pods/DCDicom)
+[![License](https://img.shields.io/cocoapods/l/DCDicom.svg?style=flat)](https://cocoapods.org/pods/DCDicom)
+[![Platform](https://img.shields.io/cocoapods/p/DCDicom.svg?style=flat)](https://cocoapods.org/pods/DCDicom)
 
 ## Installation
 
