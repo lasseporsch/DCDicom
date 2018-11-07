@@ -13,9 +13,7 @@ public class DicomFile {
     public private(set) var dataElements: [DicomDataElement] = []
 
     private var transferSyntax = DicomTransferSyntax.defaultTransferSyntax
-
     private let fileURL: URL
-    private var nestingLevel = ""
 
     public init(url: URL) throws {
         guard let inputStream = InputStream(url: url) else {
@@ -33,11 +31,9 @@ public class DicomFile {
             }
         } catch {
             inputStream.close()
-            print(error)
             throw error
         }
         self.dataElements = try self.readDataElements(from: inputStream)
-        print("Done parsing DICOM")
         inputStream.close()
     }
 }
@@ -100,26 +96,22 @@ extension DicomFile {
                 switch valueSize {
                 case 0x00000000:
                     dataElement = DicomDataElement.make(tag: tag, explicitVR: valueRepresentation, length: valueSize, value: nil)
-                    print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
                 case 0xFFFFFFFF:
                     guard tag == 0x7FE00010 else {
                         throw DicomError.invalidUseOfUndefinedLength
                     }
                     dataElement = DicomDataElement.make(tag: tag, explicitVR: valueRepresentation, length: valueSize, value: nil)
                     try self.readPixelData(from: inputStream, into: dataElement as! DicomDataElementPixelData)
-                    print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
 
                 default:
                     let value: Data = try inputStream.read(size: valueSize)
                     dataElement = DicomDataElement.make(tag: tag, explicitVR: valueRepresentation, length: valueSize, value: value)
-                    print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
                 }
 
             case "SQ":
                 let _: UInt16 = try inputStream.read(size: 2) // reserved unused 2 bytes
                 let valueSize: UInt32 = try inputStream.read(size: 4)
                 dataElement = DicomDataElement.make(tag: tag, explicitVR: valueRepresentation, length: valueSize, value: nil)
-                print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
                 try self.readSequence(from: inputStream, into: dataElement as! DicomDataElementSQ, length: valueSize)
 
             default:
@@ -131,14 +123,12 @@ extension DicomFile {
                     value = data
                 }
                 dataElement = DicomDataElement.make(tag: tag, explicitVR: valueRepresentation, length: valueSize, value: value)
-                print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
             }
         } else {
             let valueSize: UInt32 = try inputStream.read(size: 4)
             switch valueSize {
             case 0xFFFFFFFF, 0x00000000:
                 dataElement = DicomDataElement.make(tag: tag, explicitVR: "SQ", length: valueSize, value: nil)
-                print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
                 try self.readSequence(from: inputStream, into: dataElement as! DicomDataElementSQ, length: valueSize)
 
             default:
@@ -148,10 +138,8 @@ extension DicomFile {
                     value = data
                 }
                 dataElement = DicomDataElement.make(tag: tag, explicitVR: nil, length: valueSize, value: value)
-                print(String(format: "%@%@", self.nestingLevel, dataElement.debugDescription))
             }
         }
-
         return dataElement
     }
 }
@@ -202,7 +190,6 @@ extension DicomFile {
 
         do {
             var stop = false
-            self.nestingLevel += ">"
             while !stop {
                 if usesexplicitLengthInputStream && !sequenceInputStream.hasBytesAvailable {
                     stop = true
@@ -213,7 +200,6 @@ extension DicomFile {
                 case 0xFFFEE000: // Begin Sequence Item
                     let item = DicomSequenceItem()
                     sequence.add(item)
-                    print(String(format: "%@%@: Element %d", self.nestingLevel, sequence.tag.debugDescription, sequence.items.count))
                     try self.readSequenceItem(from: sequenceInputStream, into: item)
                 case 0xFFFEE0DD: // End Sequence
                     let _: UInt32 = try sequenceInputStream.read(size: 4) // Read dummy length
@@ -222,9 +208,7 @@ extension DicomFile {
                 default:
                     throw DicomError.invalidSequenceTag
                 }
-
             }
-            self.nestingLevel.removeLast()
         } catch {
             if usesexplicitLengthInputStream {
                 sequenceInputStream.close()

@@ -22,11 +22,4 @@ import Foundation
  2^32-4 bytes maximum
  */
 public class DicomDataElementOF: DicomDataElement {
-//    override var debugDescription: String {
-//        if let value = self.value, let valueString = String(data: value, encoding: .ascii) {
-//            return String(format: "%@ %@: '%@' (%d Bytes)", self.tag.debugDescription, self.vr, valueString, self.length ?? -1)
-//        } else {
-//            return super.debugDescription
-//        }
-//    }
 }

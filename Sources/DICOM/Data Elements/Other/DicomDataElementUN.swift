@@ -21,11 +21,4 @@ import Foundation
  Any length valid for any of the other DICOM Value Representations
  */
 public class DicomDataElementUN: DicomDataElement {
-//    override var debugDescription: String {
-//        if let value = self.value, let valueString = String(data: value, encoding: .ascii) {
-//            return String(format: "%@ %@: '%@' (%d Bytes)", self.tag.debugDescription, self.vr, valueString, self.length ?? -1)
-//        } else {
-//            return super.debugDescription
-//        }
-//    }
 }

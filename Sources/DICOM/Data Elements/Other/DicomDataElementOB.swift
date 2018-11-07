@@ -33,9 +33,6 @@ public class DicomDataElementOB: DicomDataElement, DicomDataElementPixelData {
         if self.tag == 0x7FE00010 && self.length == 0xFFFFFFFF && self.pixelDataItems.count >= 2 {
             let offsetTableSize = self.pixelDataItems.first!.rawValue?.count ?? 0
             let numberOfFrames = offsetTableSize / 4
-            if numberOfFrames > 1 {
-                print("Found one!")
-            }
             return String(format: "Pixeldata with %d frames", numberOfFrames)
         } else {
             return super.stringValue

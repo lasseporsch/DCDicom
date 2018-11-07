@@ -28,7 +28,7 @@ public class DicomDataElementSQ: DicomDataElement {
     }
 
     public override var stringValue: String? {
-        return self.length == 0xFFFFFFFF ? "Undefined length" : self.length == 0x00000000 ? "0 Items" : String(format: "%d Bytes", self.length)
+        return self.length == 0xFFFFFFFF ? "Delimited" : self.length == 0x00000000 ? "0 Items" : String(format: "%d Bytes", self.length)
     }
 }
 

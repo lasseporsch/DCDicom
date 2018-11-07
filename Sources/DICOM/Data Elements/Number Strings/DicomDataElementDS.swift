@@ -37,7 +37,7 @@ public class DicomDataElementDS: DicomDataElement {
             return nil
         }
         guard let stringValue = String(data: value, encoding: .ascii) else {
-            return "[Unrecognized String data]"
+            return nil
         }
         return stringValue
     }

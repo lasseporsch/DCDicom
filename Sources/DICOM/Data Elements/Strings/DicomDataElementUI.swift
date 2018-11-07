@@ -34,7 +34,7 @@ public class DicomDataElementUI: DicomDataElement {
             value.removeLast() // We remove a trailing zero-byte that has been added for padding reasons
         }
         guard let stringValue = String(data: value, encoding: .ascii) else {
-            return "[Unrecognized String data]"
+            return nil
         }
         return stringValue
     }
