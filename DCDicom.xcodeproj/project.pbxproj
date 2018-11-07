@@ -159,6 +159,7 @@
 		BE8C392021863E86008EB60D /* DCDicom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDicom.h; sourceTree = "<group>"; };
 		BE8C392121863E86008EB60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE8C392B21863EA4008EB60D /* DCDicom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCDicom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE99E48B2192F41D00D06D07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BEAB9D9B21924689007DFD50 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		BEF2288B21864001003339CE /* DCDicom.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DCDicom.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BEF2289321864579003339CE /* DCDicomMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCDicomMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,6 +379,7 @@
 			children = (
 				BEF2288B21864001003339CE /* DCDicom.podspec */,
 				BE1453E521866D2300B287F1 /* LICENSE */,
+				BE99E48B2192F41D00D06D07 /* README.md */,
 				BEAB9D9B21924689007DFD50 /* .travis.yml */,
 			);
 			name = "Pod Metadata";
