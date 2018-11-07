@@ -20,4 +20,4 @@ Lasse Porsch, lasse.porsch@d-csm.com
 
 ## License
 
-Blah is available under the MIT license. See the LICENSE file for more info.
+DCDicom is available under the MIT license. See the LICENSE file for more info.
