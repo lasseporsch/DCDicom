@@ -1,6 +1,6 @@
 //
 //  DicomDataElementUI.swift
-//  SwiftDicom
+//  DCDicom
 //
 //  Created by Lasse Porsch on 26.10.18.
 //  Copyright © 2018 DCSM GmbH. All rights reserved.

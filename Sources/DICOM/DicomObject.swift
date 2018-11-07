@@ -1,6 +1,6 @@
 //
-//  DicomFile.swift
-//  SwiftDicom
+//  DicomObject.swift
+//  DCDicom
 //
 //  Created by Lasse Porsch on 25.10.18.
 //  Copyright © 2018 DCSM GmbH. All rights reserved.
@@ -8,19 +8,23 @@
 
 import Foundation
 
-public class DicomFile {
+public class DicomObject {
 
     public private(set) var dataElements: [DicomDataElement] = []
 
     private var transferSyntax = DicomTransferSyntax.defaultTransferSyntax
-    private let fileURL: URL
 
-    public init(url: URL) throws {
+    public convenience init(url: URL) throws {
         guard let inputStream = InputStream(url: url) else {
             throw DicomError.couldNotOpenFile
         }
-        self.fileURL = url
 
+        try self.init(inputStream: inputStream)
+    }
+    public convenience init(data: Data) throws {
+        try self.init(inputStream: InputStream(data: data))
+    }
+    public init(inputStream: InputStream) throws {
         inputStream.open()
 
         do {
@@ -40,7 +44,7 @@ public class DicomFile {
 
 
 // MARK: - Reading Data Elements
-extension DicomFile {
+extension DicomObject {
     private func readDataElements(from inputStream: InputStream) throws -> [DicomDataElement] {
         var elements: [DicomDataElement] = []
 
@@ -145,7 +149,7 @@ extension DicomFile {
 }
 
 // Mark: - Reading Pixeldata fragments
-extension DicomFile {
+extension DicomObject {
     private func readPixelData(from inputStream: InputStream, into pixelDataElement: DicomDataElementPixelData) throws {
 
         // We read all items, one after the other, until we hit the sequence delimeter tag
@@ -171,7 +175,7 @@ extension DicomFile {
 
 
 // MARK: - Reading Sequences and Sequence Items
-extension DicomFile {
+extension DicomObject {
     private func readSequence(from inputStream: InputStream, into sequence: DicomDataElementSQ, length: UInt32) throws {
         var sequenceInputStream: InputStream
         var usesexplicitLengthInputStream = false

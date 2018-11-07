@@ -18,8 +18,8 @@
 		BE5129B42186479D004DF0B1 /* DicomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129852186479D004DF0B1 /* DicomError.swift */; };
 		BE5129B52186479D004DF0B1 /* DicomTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129862186479D004DF0B1 /* DicomTag.swift */; };
 		BE5129B62186479D004DF0B1 /* DicomTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129862186479D004DF0B1 /* DicomTag.swift */; };
-		BE5129B72186479D004DF0B1 /* DicomFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129872186479D004DF0B1 /* DicomFile.swift */; };
-		BE5129B82186479D004DF0B1 /* DicomFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129872186479D004DF0B1 /* DicomFile.swift */; };
+		BE5129B72186479D004DF0B1 /* DicomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129872186479D004DF0B1 /* DicomObject.swift */; };
+		BE5129B82186479D004DF0B1 /* DicomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129872186479D004DF0B1 /* DicomObject.swift */; };
 		BE5129B92186479D004DF0B1 /* DicomDataElementIS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51298A2186479D004DF0B1 /* DicomDataElementIS.swift */; };
 		BE5129BA2186479D004DF0B1 /* DicomDataElementIS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51298A2186479D004DF0B1 /* DicomDataElementIS.swift */; };
 		BE5129BB2186479D004DF0B1 /* DicomDataElementDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51298B2186479D004DF0B1 /* DicomDataElementDS.swift */; };
@@ -121,7 +121,7 @@
 		BE5129842186479D004DF0B1 /* DicomVR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomVR.swift; sourceTree = "<group>"; };
 		BE5129852186479D004DF0B1 /* DicomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomError.swift; sourceTree = "<group>"; };
 		BE5129862186479D004DF0B1 /* DicomTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomTag.swift; sourceTree = "<group>"; };
-		BE5129872186479D004DF0B1 /* DicomFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomFile.swift; sourceTree = "<group>"; };
+		BE5129872186479D004DF0B1 /* DicomObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomObject.swift; sourceTree = "<group>"; };
 		BE51298A2186479D004DF0B1 /* DicomDataElementIS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementIS.swift; sourceTree = "<group>"; };
 		BE51298B2186479D004DF0B1 /* DicomDataElementDS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementDS.swift; sourceTree = "<group>"; };
 		BE51298D2186479D004DF0B1 /* DicomDataElementDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementDA.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		BE5129812186479D004DF0B1 /* DICOM */ = {
 			isa = PBXGroup;
 			children = (
-				BE5129872186479D004DF0B1 /* DicomFile.swift */,
+				BE5129872186479D004DF0B1 /* DicomObject.swift */,
 				BE5129882186479D004DF0B1 /* Data Elements */,
 				BE5129822186479D004DF0B1 /* Sub-Types */,
 			);
@@ -648,7 +648,7 @@
 				BE5129B92186479D004DF0B1 /* DicomDataElementIS.swift in Sources */,
 				BE5129F72186479D004DF0B1 /* DicomDataElementPN.swift in Sources */,
 				BE5129B52186479D004DF0B1 /* DicomTag.swift in Sources */,
-				BE5129B72186479D004DF0B1 /* DicomFile.swift in Sources */,
+				BE5129B72186479D004DF0B1 /* DicomObject.swift in Sources */,
 				BE5129E52186479D004DF0B1 /* DicomDataElement.swift in Sources */,
 				BE5129CD2186479D004DF0B1 /* DicomDataElementCS.swift in Sources */,
 				BE5129AF2186479D004DF0B1 /* DicomTransferSyntax.swift in Sources */,
@@ -692,7 +692,7 @@
 				BE5129BA2186479D004DF0B1 /* DicomDataElementIS.swift in Sources */,
 				BE5129F82186479D004DF0B1 /* DicomDataElementPN.swift in Sources */,
 				BE5129B62186479D004DF0B1 /* DicomTag.swift in Sources */,
-				BE5129B82186479D004DF0B1 /* DicomFile.swift in Sources */,
+				BE5129B82186479D004DF0B1 /* DicomObject.swift in Sources */,
 				BE5129E62186479D004DF0B1 /* DicomDataElement.swift in Sources */,
 				BE5129CE2186479D004DF0B1 /* DicomDataElementCS.swift in Sources */,
 				BE5129B02186479D004DF0B1 /* DicomTransferSyntax.swift in Sources */,

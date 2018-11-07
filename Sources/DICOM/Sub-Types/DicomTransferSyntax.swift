@@ -1,6 +1,6 @@
 //
 //  DicomTransferSyntax.swift
-//  SwiftDicom
+//  DCDicom
 //
 //  Created by Lasse Porsch on 27.10.18.
 //  Copyright © 2018 DCSM GmbH. All rights reserved.
@@ -16,7 +16,7 @@ public struct DicomTransferSyntax {
     static private var dictionary: [String: DicomTransferSyntax] {
         do {
             var dictionary: [String: DicomTransferSyntax] = [:]
-            guard let tsJSONURL = Bundle(for: DicomFile.self).url(forResource: "DicomTransferSyntax", withExtension: "json") else {
+            guard let tsJSONURL = Bundle(for: DicomObject.self).url(forResource: "DicomTransferSyntax", withExtension: "json") else {
                 fatalError("Couldn't file Transfer Syntax definition file")
             }
             let tsJSONData = try Data(contentsOf: tsJSONURL)

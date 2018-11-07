@@ -21,3 +21,22 @@ Lasse Porsch, lasse.porsch@d-csm.com
 ## License
 
 DCDicom is available under the MIT license. See the LICENSE file for more info.
+
+## Usage
+
+### Creating a DicomObject
+You can create a DicomObject instanc from a URL, from Data or from any InputStream.
+```swift
+let dicomObject = DicomObject(url: fileURL)
+```
+
+### Getting the DICOM contents
+DICOM objects are hierarchical data structures consisting of Data Elements. Once a DicomObject is instantiated, 
+you have direct access to all of its root-level data elements:
+```swift
+dicomObject.dataElements.forEach {
+    print("Found DataElement with \($0.tag) and value \($0.stringValue))
+}
+```
+
+
