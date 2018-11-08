@@ -1,9 +1,7 @@
 //
-//  DicomDataElementAE.swift
 //  DCDicom
-//
-//  Created by Lasse Porsch on 27.10.18.
-//  Copyright © 2018 DCSM GmbH. All rights reserved.
+//  Copyright © 2018 Lasse Porsch
+//  Licensed under the MIT license, see LICENSE file
 //
 
 import Foundation

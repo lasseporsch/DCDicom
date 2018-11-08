@@ -1,8 +1,7 @@
 //
-//  DCDicom.h
 //  DCDicom
-//
-//  Created by Lasse Porsch on 28.10.18.
+//  Copyright © 2018 Lasse Porsch
+//  Licensed under the MIT license, see LICENSE file
 //
 
 @import Foundation;
