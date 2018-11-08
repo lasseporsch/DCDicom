@@ -43,7 +43,13 @@ import Foundation
  In the context of a Query with range matching (see PS3.4), the length is 28 bytes maximum.
  */
 public class DicomDataElementTM: DicomDataElement {
-    override public var stringValue: String? {
+    private static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HHMMSS.FFFFFF"
+        return formatter
+    }
+
+    public override var stringValue: String? {
         guard let value = self.rawValue else {
             return nil
         }
@@ -51,5 +57,15 @@ public class DicomDataElementTM: DicomDataElement {
             return nil
         }
         return stringValue
+    }
+
+    public var value: Date? {
+        guard let stringValue = self.stringValue else {
+            return nil
+        }
+        guard let dateValue = DicomDataElementTM.dateFormatter.date(from: stringValue) else {
+            return nil
+        }
+        return dateValue
     }
 }
