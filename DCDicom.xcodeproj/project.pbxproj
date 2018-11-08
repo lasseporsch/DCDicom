@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CF17D1B221736CA388330C2 /* libPods-DCDicomIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5C7ABEAAB346DC7736F833 /* libPods-DCDicomIOS.a */; };
-		76844AB69ADAD3B7279A74CD /* libPods-DCDicomMacOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4782F0AE8C6EBD221C46AE2C /* libPods-DCDicomMacOS.a */; };
+		2B25518712A3D123A67A009B /* libPods-DCDicomMacOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A955BED808B67413BB21A2C0 /* libPods-DCDicomMacOS.a */; };
+		77EA702F9772944F23F6C875 /* libPods-DCDicomIOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 333BCBE4D6BE05B208B36D4E /* libPods-DCDicomIOSTests.a */; };
+		7B9424F1230425A33C21603D /* libPods-DCDicomIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B0638E8D5C0A9EA0ED1E3 /* libPods-DCDicomIOS.a */; };
 		BE1453E621866D2300B287F1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE1453E521866D2300B287F1 /* LICENSE */; };
 		BE5129AF2186479D004DF0B1 /* DicomTransferSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129832186479D004DF0B1 /* DicomTransferSyntax.swift */; };
 		BE5129B02186479D004DF0B1 /* DicomTransferSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129832186479D004DF0B1 /* DicomTransferSyntax.swift */; };
@@ -86,12 +87,13 @@
 		BE5129F82186479D004DF0B1 /* DicomDataElementPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129AE2186479D004DF0B1 /* DicomDataElementPN.swift */; };
 		BE5129FC218647D9004DF0B1 /* DicomTransferSyntax.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */; };
 		BE5129FD218647D9004DF0B1 /* DicomTransferSyntax.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */; };
+		BE72761F219483FE00A43AE7 /* DicomDataElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */; };
+		BE727620219483FF00A43AE7 /* DicomDataElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */; };
 		BE8C392221863E86008EB60D /* DCDicom.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8C392021863E86008EB60D /* DCDicom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEF2288C218643A5003339CE /* DCDicom.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8C392021863E86008EB60D /* DCDicom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEF228982186457A003339CE /* DCDicom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C392B21863EA4008EB60D /* DCDicom.framework */; };
-		BEF228A521864589003339CE /* DCDicomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF228A421864589003339CE /* DCDicomTests.swift */; };
 		BEF228A721864589003339CE /* DCDicom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C391D21863E86008EB60D /* DCDicom.framework */; };
-		BEF228AD218645B3003339CE /* DCDicomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF228A421864589003339CE /* DCDicomTests.swift */; };
+		DE7455A4AB580C7311C067AE /* libPods-DCDicomMacOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF0C46C47DB7C0BDD1624F /* libPods-DCDicomMacOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,10 +114,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A5C7ABEAAB346DC7736F833 /* libPods-DCDicomIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AD7D207D322DBAF82F84454 /* Pods-DCDicomMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOS.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOS/Pods-DCDicomMacOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4782F0AE8C6EBD221C46AE2C /* libPods-DCDicomMacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomMacOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E21C4464262E5EEE3EB7734 /* Pods-DCDicomMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOS.release.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOS/Pods-DCDicomMacOS.release.xcconfig"; sourceTree = "<group>"; };
+		333BCBE4D6BE05B208B36D4E /* libPods-DCDicomIOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomIOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364B0638E8D5C0A9EA0ED1E3 /* libPods-DCDicomIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EF0C46C47DB7C0BDD1624F /* libPods-DCDicomMacOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomMacOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1DF17F5D3D5BF658DFD6BD /* Pods-DCDicomMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOS.release.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOS/Pods-DCDicomMacOS.release.xcconfig"; sourceTree = "<group>"; };
+		606554FA02AF401A0FA460EC /* Pods-DCDicomMacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOSTests/Pods-DCDicomMacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2C5B28DF15154A938D6F93 /* Pods-DCDicomIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOS.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomIOS/Pods-DCDicomIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		90F8A67EBAE0BC28708E459E /* Pods-DCDicomIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOSTests.release.xcconfig"; path = "Target Support Files/Pods-DCDicomIOSTests/Pods-DCDicomIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		9FAF709C1B8F405C3E57667B /* Pods-DCDicomMacOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOSTests.release.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOSTests/Pods-DCDicomMacOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A955BED808B67413BB21A2C0 /* libPods-DCDicomMacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCDicomMacOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7EFAEF36E50F103DDE6DA2F /* Pods-DCDicomIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomIOSTests/Pods-DCDicomIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE1453E521866D2300B287F1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE5129832186479D004DF0B1 /* DicomTransferSyntax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomTransferSyntax.swift; sourceTree = "<group>"; };
 		BE5129842186479D004DF0B1 /* DicomVR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomVR.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 		BE5129AD2186479D004DF0B1 /* DicomDataElementSQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementSQ.swift; sourceTree = "<group>"; };
 		BE5129AE2186479D004DF0B1 /* DicomDataElementPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementPN.swift; sourceTree = "<group>"; };
 		BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DicomTransferSyntax.json; sourceTree = "<group>"; };
+		BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicomDataElementTests.swift; sourceTree = "<group>"; };
 		BE8C391D21863E86008EB60D /* DCDicom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCDicom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8C392021863E86008EB60D /* DCDicom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDicom.h; sourceTree = "<group>"; };
 		BE8C392121863E86008EB60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,10 +173,9 @@
 		BEF2288B21864001003339CE /* DCDicom.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DCDicom.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BEF2289321864579003339CE /* DCDicomMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCDicomMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF228A221864589003339CE /* DCDicomIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCDicomIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEF228A421864589003339CE /* DCDicomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDicomTests.swift; sourceTree = "<group>"; };
 		BEF228A621864589003339CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D11BD2FFE7E7438883147F1A /* Pods-DCDicomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOS.release.xcconfig"; path = "Target Support Files/Pods-DCDicomIOS/Pods-DCDicomIOS.release.xcconfig"; sourceTree = "<group>"; };
-		FDA2D11518D8AAF388434141 /* Pods-DCDicomIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOS.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomIOS/Pods-DCDicomIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D4C437BCE91A981FC0231E10 /* Pods-DCDicomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomIOS.release.xcconfig"; path = "Target Support Files/Pods-DCDicomIOS/Pods-DCDicomIOS.release.xcconfig"; sourceTree = "<group>"; };
+		D8F32646C277038831AB3377 /* Pods-DCDicomMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCDicomMacOS.debug.xcconfig"; path = "Target Support Files/Pods-DCDicomMacOS/Pods-DCDicomMacOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF17D1B221736CA388330C2 /* libPods-DCDicomIOS.a in Frameworks */,
+				7B9424F1230425A33C21603D /* libPods-DCDicomIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76844AB69ADAD3B7279A74CD /* libPods-DCDicomMacOS.a in Frameworks */,
+				2B25518712A3D123A67A009B /* libPods-DCDicomMacOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF228982186457A003339CE /* DCDicom.framework in Frameworks */,
+				DE7455A4AB580C7311C067AE /* libPods-DCDicomMacOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF228A721864589003339CE /* DCDicom.framework in Frameworks */,
+				77EA702F9772944F23F6C875 /* libPods-DCDicomIOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,19 +219,25 @@
 		196570618E03F078F8EE5F1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FDA2D11518D8AAF388434141 /* Pods-DCDicomIOS.debug.xcconfig */,
-				D11BD2FFE7E7438883147F1A /* Pods-DCDicomIOS.release.xcconfig */,
-				2AD7D207D322DBAF82F84454 /* Pods-DCDicomMacOS.debug.xcconfig */,
-				6E21C4464262E5EEE3EB7734 /* Pods-DCDicomMacOS.release.xcconfig */,
+				7F2C5B28DF15154A938D6F93 /* Pods-DCDicomIOS.debug.xcconfig */,
+				D4C437BCE91A981FC0231E10 /* Pods-DCDicomIOS.release.xcconfig */,
+				B7EFAEF36E50F103DDE6DA2F /* Pods-DCDicomIOSTests.debug.xcconfig */,
+				90F8A67EBAE0BC28708E459E /* Pods-DCDicomIOSTests.release.xcconfig */,
+				D8F32646C277038831AB3377 /* Pods-DCDicomMacOS.debug.xcconfig */,
+				5B1DF17F5D3D5BF658DFD6BD /* Pods-DCDicomMacOS.release.xcconfig */,
+				606554FA02AF401A0FA460EC /* Pods-DCDicomMacOSTests.debug.xcconfig */,
+				9FAF709C1B8F405C3E57667B /* Pods-DCDicomMacOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BC2704CBD45815C8F952CEAC /* Frameworks */ = {
+		24114659D149EB8C86132187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A5C7ABEAAB346DC7736F833 /* libPods-DCDicomIOS.a */,
-				4782F0AE8C6EBD221C46AE2C /* libPods-DCDicomMacOS.a */,
+				364B0638E8D5C0A9EA0ED1E3 /* libPods-DCDicomIOS.a */,
+				333BCBE4D6BE05B208B36D4E /* libPods-DCDicomIOSTests.a */,
+				A955BED808B67413BB21A2C0 /* libPods-DCDicomMacOS.a */,
+				37EF0C46C47DB7C0BDD1624F /* libPods-DCDicomMacOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -350,6 +366,14 @@
 			path = "DICOM Definitions";
 			sourceTree = "<group>";
 		};
+		BE72761B219482AF00A43AE7 /* DicomDataElementTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */,
+			);
+			path = DicomDataElementTests;
+			sourceTree = "<group>";
+		};
 		BE8C391121863E34008EB60D = {
 			isa = PBXGroup;
 			children = (
@@ -359,7 +383,7 @@
 				BEF2288E2186441B003339CE /* Tests */,
 				BE8C391E21863E86008EB60D /* Products */,
 				196570618E03F078F8EE5F1B /* Pods */,
-				BC2704CBD45815C8F952CEAC /* Frameworks */,
+				24114659D149EB8C86132187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -398,7 +422,7 @@
 		BEF2288E2186441B003339CE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BEF228A421864589003339CE /* DCDicomTests.swift */,
+				BE72761B219482AF00A43AE7 /* DicomDataElementTests */,
 				BEF228A621864589003339CE /* Info.plist */,
 			);
 			path = Tests;
@@ -430,7 +454,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE8C392321863E86008EB60D /* Build configuration list for PBXNativeTarget "DCDicomIOS" */;
 			buildPhases = (
-				D0866B120CC4CB1C9C10F8F8 /* [CP] Check Pods Manifest.lock */,
+				794A2EDC2BE9CFD64F7D02EA /* [CP] Check Pods Manifest.lock */,
 				BE8C391821863E86008EB60D /* Headers */,
 				BE8C391921863E86008EB60D /* Sources */,
 				BE8C391A21863E86008EB60D /* Frameworks */,
@@ -449,7 +473,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE8C393021863EA4008EB60D /* Build configuration list for PBXNativeTarget "DCDicomMacOS" */;
 			buildPhases = (
-				E79B2FC54D5A61AD4DBB3521 /* [CP] Check Pods Manifest.lock */,
+				E7285DA31540D9499812E5DF /* [CP] Check Pods Manifest.lock */,
 				BE8C392621863EA4008EB60D /* Headers */,
 				BE8C392721863EA4008EB60D /* Sources */,
 				BE8C392821863EA4008EB60D /* Frameworks */,
@@ -468,6 +492,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEF2289B2186457A003339CE /* Build configuration list for PBXNativeTarget "DCDicomMacOSTests" */;
 			buildPhases = (
+				8571220AC807FC93AA72DFC2 /* [CP] Check Pods Manifest.lock */,
 				BEF2288F21864579003339CE /* Sources */,
 				BEF2289021864579003339CE /* Frameworks */,
 				BEF2289121864579003339CE /* Resources */,
@@ -486,6 +511,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEF228AA21864589003339CE /* Build configuration list for PBXNativeTarget "DCDicomIOSTests" */;
 			buildPhases = (
+				F2FED5775B5040F3C4475086 /* [CP] Check Pods Manifest.lock */,
 				BEF2289E21864589003339CE /* Sources */,
 				BEF2289F21864589003339CE /* Frameworks */,
 				BEF228A021864589003339CE /* Resources */,
@@ -578,7 +604,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D0866B120CC4CB1C9C10F8F8 /* [CP] Check Pods Manifest.lock */ = {
+		794A2EDC2BE9CFD64F7D02EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -600,7 +626,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E79B2FC54D5A61AD4DBB3521 /* [CP] Check Pods Manifest.lock */ = {
+		8571220AC807FC93AA72DFC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DCDicomMacOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7285DA31540D9499812E5DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -616,6 +664,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DCDicomMacOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2FED5775B5040F3C4475086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DCDicomIOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -717,7 +787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF228AD218645B3003339CE /* DCDicomTests.swift in Sources */,
+				BE727620219483FF00A43AE7 /* DicomDataElementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +795,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF228A521864589003339CE /* DCDicomTests.swift in Sources */,
+				BE72761F219483FE00A43AE7 /* DicomDataElementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,7 +887,7 @@
 		};
 		BE8C392421863E86008EB60D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDA2D11518D8AAF388434141 /* Pods-DCDicomIOS.debug.xcconfig */;
+			baseConfigurationReference = 7F2C5B28DF15154A938D6F93 /* Pods-DCDicomIOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -900,7 +970,7 @@
 		};
 		BE8C392521863E86008EB60D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D11BD2FFE7E7438883147F1A /* Pods-DCDicomIOS.release.xcconfig */;
+			baseConfigurationReference = D4C437BCE91A981FC0231E10 /* Pods-DCDicomIOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -977,7 +1047,7 @@
 		};
 		BE8C393121863EA4008EB60D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AD7D207D322DBAF82F84454 /* Pods-DCDicomMacOS.debug.xcconfig */;
+			baseConfigurationReference = D8F32646C277038831AB3377 /* Pods-DCDicomMacOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1061,7 +1131,7 @@
 		};
 		BE8C393221863EA4008EB60D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E21C4464262E5EEE3EB7734 /* Pods-DCDicomMacOS.release.xcconfig */;
+			baseConfigurationReference = 5B1DF17F5D3D5BF658DFD6BD /* Pods-DCDicomMacOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1138,6 +1208,7 @@
 		};
 		BEF2289C2186457A003339CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 606554FA02AF401A0FA460EC /* Pods-DCDicomMacOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1212,6 +1283,7 @@
 		};
 		BEF2289D2186457A003339CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAF709C1B8F405C3E57667B /* Pods-DCDicomMacOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1279,6 +1351,7 @@
 		};
 		BEF228AB21864589003339CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7EFAEF36E50F103DDE6DA2F /* Pods-DCDicomIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1353,6 +1426,7 @@
 		};
 		BEF228AC21864589003339CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F8A67EBAE0BC28708E459E /* Pods-DCDicomIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
