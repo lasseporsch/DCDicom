@@ -27,17 +27,28 @@ DCDicom is available under the MIT license. See the LICENSE file for more info.
 ### Creating a DicomObject
 You can create a DicomObject instance from a URL, from Data or from any InputStream.
 ```swift
-let dicomObject = DicomObject(url: fileURL)
-```
-
-### Getting the raw DICOM contents
-DICOMs are hierarchical data structures consisting of Data Elements. Once a DicomObject is instantiated, 
-you have direct access to all of its root-level data elements:
-```swift
-dicomObject.dataElements.forEach {
-    print("Found DataElement with \($0.tag) and value \($0.stringValue)")
+do {
+    let dicomObjectFromURL = try DicomObject(url: dicomURL)
+    let dicomObjectFromData = try DicomObject(data: dicomData)
+    let dicomObjectFromInputStream = try DicomObject(inputStream: dicomInputStream)
+} catch {
+    print("Something went wrong! Error: \(error)")
 }
 ```
+
+### Reading the Data Elements
+DICOMs are hierarchical data structures consisting of Data Elements. Once a DicomObject is instantiated, 
+you have direct access to all of its root-level data elements by traversing the `dataElements`:
+```swift
+dicomObject.dataElements.forEach {
+    print("Found DataElement with \($0.tag)")
+}
+```
+Specific Data Elements can also be accessed by subscript:
+```swift
+let sopInstanceUidDataElement = dicomObject[0x00080018]!
+```
+
 
 ### Accessing typed values
 While each Data Element normally has a raw value of type Data and most have a string representation of this raw value, 

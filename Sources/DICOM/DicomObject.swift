@@ -40,6 +40,14 @@ public class DicomObject {
     }
 }
 
+public extension DicomObject {
+    subscript(tag: DicomTag) -> DicomDataElement? {
+        get {
+            return self.dataElements.filter { element in element.tag == tag }.first
+        }
+    }
+}
+
 
 // MARK: - Reading Data Elements
 extension DicomObject {
