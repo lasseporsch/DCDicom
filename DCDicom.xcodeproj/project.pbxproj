@@ -87,6 +87,14 @@
 		BE5129F82186479D004DF0B1 /* DicomDataElementPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5129AE2186479D004DF0B1 /* DicomDataElementPN.swift */; };
 		BE5129FC218647D9004DF0B1 /* DicomTransferSyntax.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */; };
 		BE5129FD218647D9004DF0B1 /* DicomTransferSyntax.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */; };
+		BE66DE8021B55DA200821A08 /* SCLERA_OD.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE66DE7F21B55D5000821A08 /* SCLERA_OD.dcm */; };
+		BE66DE8121B55DA200821A08 /* SCLERA_OD.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE66DE7F21B55D5000821A08 /* SCLERA_OD.dcm */; };
+		BE67648C21B14AB500C72765 /* DicomObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67648A21B14AAC00C72765 /* DicomObjectTests.swift */; };
+		BE67648D21B14AB600C72765 /* DicomObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67648A21B14AAC00C72765 /* DicomObjectTests.swift */; };
+		BE67649021B14FB900C72765 /* TestDicom_PDF.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE67648F21B14FB900C72765 /* TestDicom_PDF.dcm */; };
+		BE67649121B14FB900C72765 /* TestDicom_PDF.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE67648F21B14FB900C72765 /* TestDicom_PDF.dcm */; };
+		BE67649321B16A8400C72765 /* TestDicom_Image.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE67649221B16A8400C72765 /* TestDicom_Image.dcm */; };
+		BE67649421B16A8400C72765 /* TestDicom_Image.dcm in Resources */ = {isa = PBXBuildFile; fileRef = BE67649221B16A8400C72765 /* TestDicom_Image.dcm */; };
 		BE72761F219483FE00A43AE7 /* DicomDataElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */; };
 		BE727620219483FF00A43AE7 /* DicomDataElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */; };
 		BE8C392221863E86008EB60D /* DCDicom.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8C392021863E86008EB60D /* DCDicom.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -163,6 +171,10 @@
 		BE5129AD2186479D004DF0B1 /* DicomDataElementSQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementSQ.swift; sourceTree = "<group>"; };
 		BE5129AE2186479D004DF0B1 /* DicomDataElementPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicomDataElementPN.swift; sourceTree = "<group>"; };
 		BE5129FB218647D9004DF0B1 /* DicomTransferSyntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DicomTransferSyntax.json; sourceTree = "<group>"; };
+		BE66DE7F21B55D5000821A08 /* SCLERA_OD.dcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCLERA_OD.dcm; sourceTree = "<group>"; };
+		BE67648A21B14AAC00C72765 /* DicomObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicomObjectTests.swift; sourceTree = "<group>"; };
+		BE67648F21B14FB900C72765 /* TestDicom_PDF.dcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestDicom_PDF.dcm; sourceTree = "<group>"; };
+		BE67649221B16A8400C72765 /* TestDicom_Image.dcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestDicom_Image.dcm; sourceTree = "<group>"; };
 		BE72761C219482CC00A43AE7 /* DicomDataElementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicomDataElementTests.swift; sourceTree = "<group>"; };
 		BE8C391D21863E86008EB60D /* DCDicom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCDicom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8C392021863E86008EB60D /* DCDicom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDicom.h; sourceTree = "<group>"; };
@@ -366,6 +378,24 @@
 			path = "DICOM Definitions";
 			sourceTree = "<group>";
 		};
+		BE67648921B14A9900C72765 /* DicomObjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE67648A21B14AAC00C72765 /* DicomObjectTests.swift */,
+			);
+			path = DicomObjectTests;
+			sourceTree = "<group>";
+		};
+		BE67648E21B14F9900C72765 /* Test DICOM Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE67648F21B14FB900C72765 /* TestDicom_PDF.dcm */,
+				BE67649221B16A8400C72765 /* TestDicom_Image.dcm */,
+				BE66DE7F21B55D5000821A08 /* SCLERA_OD.dcm */,
+			);
+			path = "Test DICOM Resources";
+			sourceTree = "<group>";
+		};
 		BE72761B219482AF00A43AE7 /* DicomDataElementTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +452,8 @@
 		BEF2288E2186441B003339CE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BE67648E21B14F9900C72765 /* Test DICOM Resources */,
+				BE67648921B14A9900C72765 /* DicomObjectTests */,
 				BE72761B219482AF00A43AE7 /* DicomDataElementTests */,
 				BEF228A621864589003339CE /* Info.plist */,
 			);
@@ -591,6 +623,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE66DE8021B55DA200821A08 /* SCLERA_OD.dcm in Resources */,
+				BE67649321B16A8400C72765 /* TestDicom_Image.dcm in Resources */,
+				BE67649021B14FB900C72765 /* TestDicom_PDF.dcm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +633,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE66DE8121B55DA200821A08 /* SCLERA_OD.dcm in Resources */,
+				BE67649421B16A8400C72765 /* TestDicom_Image.dcm in Resources */,
+				BE67649121B14FB900C72765 /* TestDicom_PDF.dcm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +826,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE727620219483FF00A43AE7 /* DicomDataElementTests.swift in Sources */,
+				BE67648C21B14AB500C72765 /* DicomObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE72761F219483FE00A43AE7 /* DicomDataElementTests.swift in Sources */,
+				BE67648D21B14AB600C72765 /* DicomObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ public class DicomObject {
 
     public private(set) var dataElements: [DicomDataElement] = []
 
-    private var transferSyntax = DicomTransferSyntax.defaultTransferSyntax
+    private(set) var transferSyntax = DicomTransferSyntax.defaultTransferSyntax
 
     public convenience init(url: URL) throws {
         guard let inputStream = InputStream(url: url) else {
@@ -29,14 +29,15 @@ public class DicomObject {
             let _: String = try inputStream.read(size: 128) // Preamble
             let prefix: String = try inputStream.read(size: 4) // Prefix
             guard prefix == "DICM" else {
-                throw DicomError.invalidPrefix
+                throw DicomError.invalidPrefix(prefix)
             }
+
+            self.dataElements = try self.readDataElements(from: inputStream)
+            inputStream.close()
         } catch {
             inputStream.close()
             throw error
         }
-        self.dataElements = try self.readDataElements(from: inputStream)
-        inputStream.close()
     }
 }
 
@@ -60,6 +61,7 @@ extension DicomObject {
                 stop = true
                 continue
             }
+
             switch tag {
             case 0xFFFCFFFC:
                 // This is the "Data Set Trailing Padding". With this we have read everything and can stop now
@@ -238,16 +240,19 @@ extension DicomObject {
     }
 }
 
-
 private extension InputStream {
     func read<T>(size: UInt32) throws -> T {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
+        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
+            buffer.deallocate()
             throw DicomError.invalidDataElement
         }
-        return UnsafeRawPointer(buffer).load(as: T.self)
+        let returnValue = UnsafeRawPointer(buffer).load(as: T.self)
+        buffer.deallocate()
+        return returnValue
     }
     func read() throws -> DicomTag {
         let group: UInt16 = try self.read(size: 2)
@@ -261,20 +266,27 @@ private extension InputStream {
     func read(size: UInt32) throws -> String {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
+        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
+            buffer.deallocate()
             throw DicomError.invalidDataElement
         }
-        return String(cString: buffer)
+        let string = String(cString: buffer)
+        buffer.deallocate()
+        return string
     }
     func read(size: UInt32) throws -> Data {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
+        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
+            buffer.deallocate()
             throw DicomError.invalidDataElement
         }
-
-        return Data(bytes: UnsafeBufferPointer(start: buffer, count: requestedSize))
+        let data = Data(bytes: UnsafeBufferPointer(start: buffer, count: requestedSize))
+        buffer.deallocate()
+        return data
     }
 }
