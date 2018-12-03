@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
 
   s.resources    = 'Resources/**/*.*'
 
+  s.exclude_files = 'Tests/**/*'
+
   s.swift_version = '4.2'
 
   s.dependency 'Unbox', '3.0.0'
