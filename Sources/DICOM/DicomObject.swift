@@ -244,7 +244,6 @@ private extension InputStream {
     func read<T>(size: UInt32) throws -> T {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
-        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
             buffer.deallocate()
@@ -266,7 +265,6 @@ private extension InputStream {
     func read(size: UInt32) throws -> String {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
-        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
             buffer.deallocate()
@@ -279,7 +277,6 @@ private extension InputStream {
     func read(size: UInt32) throws -> Data {
         let requestedSize = Int(size)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: requestedSize)
-        buffer.initialize(to: 0)
         let actualSize = self.read(buffer, maxLength: requestedSize)
         guard actualSize == requestedSize else {
             buffer.deallocate()
