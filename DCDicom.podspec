@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'DCDicom'
-  s.version      = '0.2.0'
+  s.version      = '0.3.0'
   s.summary      = 'A DICOM reader written in Swift.'
 
   s.homepage     = 'https://github.com/lasseporsch/DCDicom'
@@ -20,7 +20,5 @@ Pod::Spec.new do |s|
 
   s.exclude_files = 'Tests/**/*'
 
-  s.swift_version = '4.2'
-
-  s.dependency 'Unbox', '3.0.0'
+  s.swift_version = '5.0'
 end

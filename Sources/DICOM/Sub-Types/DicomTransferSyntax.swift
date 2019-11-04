@@ -5,9 +5,8 @@
 //
 
 import Foundation
-import Unbox
 
-public struct DicomTransferSyntax {
+public struct DicomTransferSyntax: Decodable {
 
     static let defaultTransferSyntax = DicomTransferSyntax.dictionary["1.2.840.10008.1.2"]! // If this entry is not present the app should rightfully crash
 
@@ -18,7 +17,7 @@ public struct DicomTransferSyntax {
                 fatalError("Couldn't file Transfer Syntax definition file")
             }
             let tsJSONData = try Data(contentsOf: tsJSONURL)
-            let tsArray: [DicomTransferSyntax] = try unbox(data: tsJSONData)
+            let tsArray = try JSONDecoder().decode([DicomTransferSyntax].self, from: tsJSONData)
 
             tsArray.forEach {
                 dictionary[$0.uid] = $0
@@ -38,17 +37,5 @@ public struct DicomTransferSyntax {
 
     static func with(uid: String) -> DicomTransferSyntax? {
         return DicomTransferSyntax.dictionary[uid]
-    }
-}
-
-
-extension DicomTransferSyntax: Unboxable {
-    public init(unboxer: Unboxer) throws {
-        self.uid = try unboxer.unbox(key: "uid")
-        self.name = try unboxer.unbox(key: "name")
-        self.explicitVR = try unboxer.unbox(key: "explicitVR")
-        self.bigEndian = try unboxer.unbox(key: "bigEndian")
-        self.deflated = try unboxer.unbox(key: "deflated")
-        self.encapsulated = try unboxer.unbox(key: "encapsulated")
     }
 }

@@ -282,7 +282,7 @@ private extension InputStream {
             buffer.deallocate()
             throw DicomError.invalidDataElement
         }
-        let data = Data(bytes: UnsafeBufferPointer(start: buffer, count: requestedSize))
+        let data = Data(UnsafeBufferPointer(start: buffer, count: requestedSize))
         buffer.deallocate()
         return data
     }
