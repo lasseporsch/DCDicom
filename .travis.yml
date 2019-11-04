@@ -2,9 +2,11 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode10
-language: objective-c
+osx_image: xcode11.2
+language: swift
+before_install:
+    - gem install cocoapods --pre # Since Travis is not always on latest version
 script:
-    - set -o pipefail && xcodebuild clean test -enableCodeCoverage YES -workspace DCDicom.xcworkspace -scheme DCDicomIOS -destination "platform=iOS Simulator,name=iPhone 8,OS=13.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty
+    - set -o pipefail && xcodebuild clean test -enableCodeCoverage YES -workspace DCDicom.xcworkspace -scheme DCDicomIOS -destination "platform=iOS Simulator,name=iPhone 8,OS=12.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty
     - set -o pipefail && xcodebuild clean test -enableCodeCoverage YES -workspace DCDicom.xcworkspace -scheme DCDicomMacOS -destination "platform=OS X" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty
     - pod lib lint
