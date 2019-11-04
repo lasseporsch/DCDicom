@@ -9,7 +9,7 @@ import Foundation
 public enum DicomError: Error {
     case couldNotOpenFile
     case invalidPreamble
-    case invalidPrefix
+    case invalidPrefix(_ prefix: String)
     case invalidDataElement
     case undelimitedSequencesNotSupported
     case undelimitedSequenceItemsNotSupported

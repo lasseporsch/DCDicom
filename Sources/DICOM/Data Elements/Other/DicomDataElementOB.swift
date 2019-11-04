@@ -20,7 +20,7 @@ import Foundation
  # Length of value
  see Transfer Syntax definition
  */
-public class DicomDataElementOB: DicomDataElement, DicomDataElementPixelData {
+public class DicomDataElementOB: DicomDataElement {
     public private(set) var pixelDataItems: [DicomPixelDataItem] = []
 
     public func add(_ item: DicomPixelDataItem) {
@@ -37,6 +37,7 @@ public class DicomDataElementOB: DicomDataElement, DicomDataElementPixelData {
         }
     }
 }
+
 
 public class DicomPixelDataItem {
     public let tag: DicomTag

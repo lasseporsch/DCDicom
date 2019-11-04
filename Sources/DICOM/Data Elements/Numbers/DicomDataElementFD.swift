@@ -24,7 +24,8 @@ public class DicomDataElementFD: DicomDataElement {
 
     init(tag: DicomTag, value: Data?) {
         if let rawValue = value {
-            self.value = rawValue.withUnsafeBytes { (pointer: UnsafePointer<Float64>) in pointer.pointee }
+//            self.value = rawValue.withUnsafeBytes { (pointer: UnsafePointer<Float64>) in pointer.pointee }
+            self.value = rawValue.withUnsafeBytes { $0.load(as: Float64.self) }
         } else {
             self.value = nil
         }

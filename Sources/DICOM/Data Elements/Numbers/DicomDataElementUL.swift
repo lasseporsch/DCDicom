@@ -26,7 +26,8 @@ public class DicomDataElementUL: DicomDataElement {
 
     init(tag: DicomTag, value: Data?) {
         if let rawValue = value {
-            self.value = rawValue.withUnsafeBytes { (pointer: UnsafePointer<UInt32>) in pointer.pointee }
+//            self.value = rawValue.withUnsafeBytes { (pointer: UnsafePointer<UInt32>) in pointer.pointee }
+            self.value = rawValue.withUnsafeBytes { $0.load(as: UInt32.self) }
         } else {
             self.value = nil
         }
