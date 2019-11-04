@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'DCDicom'
-  s.version      = '0.3.0'
+  s.version      = '0.3.1'
   s.summary      = 'A DICOM reader written in Swift.'
 
   s.homepage     = 'https://github.com/lasseporsch/DCDicom'
